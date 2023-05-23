@@ -9,3 +9,5 @@ html, body {
   background-attachment: fixed; // The background is fixed relative to the viewport
   color: $steel-regular; // Change text color to an _almost_ white
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
