@@ -35,10 +35,13 @@ import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { ProveedoresaniadirComponent } from './proveedoresaniadir/proveedoresaniadir.component';
 import { ProveedoresComponent } from './proveedores/proveedores.component';
+import { FamiliaComponent } from './familia/familia.component';
+import { ArticulosComponent } from './articulos/articulos.component';
+import { FacgastosComponent } from './facgastos/facgastos.component';
 
 
 @NgModule({
-  declarations: [	
+  declarations: [				
     AppComponent,
     NavComponent,
     DashComponent,
@@ -47,7 +50,10 @@ import { ProveedoresComponent } from './proveedores/proveedores.component';
     ClientesComponent,
     ClientesaniadirComponent,
     ProveedoresaniadirComponent,
-    ProveedoresComponent
+    ProveedoresComponent,
+      FamiliaComponent,
+      ArticulosComponent,
+      FacgastosComponent
    ],
   imports: [
     BrowserModule,
