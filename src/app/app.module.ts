@@ -33,6 +33,8 @@ import {MatTableModule} from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { ProveedoresaniadirComponent } from './proveedoresaniadir/proveedoresaniadir.component';
+import { ProveedoresComponent } from './proveedores/proveedores.component';
 
 
 @NgModule({
@@ -43,7 +45,9 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     CardComponent,
     LineChartComponent,
     ClientesComponent,
-    ClientesaniadirComponent
+    ClientesaniadirComponent,
+    ProveedoresaniadirComponent,
+    ProveedoresComponent
    ],
   imports: [
     BrowserModule,

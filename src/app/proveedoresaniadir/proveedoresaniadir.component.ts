@@ -1,28 +1,27 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { ClientesService } from '../services/clientes.service';
+import { ProveedoresService } from '../services/proveedores.service';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 
-
 @Component({
-  selector: 'app-clientesaniadir',
-  templateUrl: './clientesaniadir.component.html',
-  styleUrls: ['./clientesaniadir.component.scss']
+  selector: 'app-proveedoresaniadir',
+  templateUrl: './proveedoresaniadir.component.html',
+  styleUrls: ['./proveedoresaniadir.component.scss']
 })
-export class ClientesaniadirComponent implements OnInit {
+export class ProveedoresaniadirComponent implements OnInit {
   empForm: FormGroup;
 
   constructor(
     private _fb: FormBuilder, 
-    private _empService: ClientesService, 
-    private _dialogRef: MatDialogRef<ClientesaniadirComponent>,
+    private _empService: ProveedoresService, 
+    private _dialogRef: MatDialogRef<ProveedoresaniadirComponent>,
     @Inject(MAT_DIALOG_DATA) public data:any,
     ){
     this.empForm = this._fb.group({
       Nombre: '',
       Apellidos: '',
-      email: '',
-      telefono: '',
+      // email: '',
+      // gender: '',
       // education: '',           //DEJO SOLO NOMBRE Y APELLIDO
       // dob: ''
     });
@@ -36,7 +35,7 @@ export class ClientesaniadirComponent implements OnInit {
     if(this.empForm.valid){
       if(this.data) {
         this._empService
-        .updateCliente(this.data.id, this.empForm.value)
+        .updateProveedor(this.data.id, this.empForm.value)
         .subscribe({
           next: (val: any) => {
           },
@@ -46,7 +45,7 @@ export class ClientesaniadirComponent implements OnInit {
         });
       }else {
         this._empService
-        .addCliente(this.empForm.value).subscribe({
+        .addProveedor(this.empForm.value).subscribe({
           next: (val: any) => {
           },
           error: (err: any) => {
