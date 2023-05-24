@@ -1,17 +1,17 @@
 <div mad-dialog-title>
-    <h1>AÑADIR CLIENTE</h1>
+    <h1>Añadir Proveedor</h1>
 </div>
 
 <form [formGroup]="empForm" (ngSubmit)="onFormSubmit()">
     <div mat-dialog-content class="content">
         <div class="row">
             <mat-form-field appearance="outline">
-                <mat-label>Nombre</mat-label>
-                <input matInput type="text" placeholder="Nombre" formControlName="Nombre">
+                <mat-label>Razon Social</mat-label>
+                <input matInput type="text" placeholder="Razon Social" formControlName="Nombre">
             </mat-form-field>
             <mat-form-field appearance="outline">
-                <mat-label>Apellidos</mat-label>
-                <input matInput type="text" placeholder="Apellidos" formControlName="Apellidos">
+                <mat-label>Persona Contacto</mat-label>
+                <input matInput type="text" placeholder="Persona Contacto" formControlName="Apellidos">
             </mat-form-field>
         </div>
 
@@ -19,6 +19,6 @@
 
     <div mat-dialog-actions class="action">
         <button mat-raised-button type="button" [mat-dialog-close]="false">Cancelar</button>
-        <button mat-raised-button color="primary" type="submit">{{data ? 'Update': 'Save'}}</button>
+        <button mat-raised-button color="primary" type="submit">{{data ? 'Update': 'Guardar'}}</button>
     </div>
 </form>
