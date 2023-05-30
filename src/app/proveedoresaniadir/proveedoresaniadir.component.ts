@@ -18,12 +18,22 @@ export class ProveedoresaniadirComponent implements OnInit {
     @Inject(MAT_DIALOG_DATA) public data:any,
     ){
     this.empForm = this._fb.group({
-      Nombre: '',
-      Apellidos: '',
-      // email: '',
-      // gender: '',
-      // education: '',           //DEJO SOLO NOMBRE Y APELLIDO
-      // dob: ''
+      RazonSocial: '',
+      PersonaContacto: '',
+      Direccion: '',
+      Provincia: '',
+      CodigoPostal: '',
+      Telefono: '',
+      Movil: '',
+      Descuento: '',
+      Recargo: '',
+      Observaciones: '',
+      Foto: '',
+      Correo: '',
+      Login: '',
+      Password: '',
+      PagWeb: '',
+      
     });
   }
 

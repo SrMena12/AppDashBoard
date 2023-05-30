@@ -1,32 +1,12 @@
-<mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav" fixedInViewport
-      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-      [mode]="(isHandset$ | async) ? 'over' : 'side'"
-      [opened]="(isHandset$ | async) === false">
-    <mat-toolbar>Menu</mat-toolbar>
-    <mat-nav-list>
-      <a mat-list-item routerLink="/link1">Clientes</a>
-      <a mat-list-item routerLink="/link2">Proveedores</a>
-      <a mat-list-item routerLink="/link3">Articulos</a>
-      <a mat-list-item routerLink="/link4">Familia</a>
-      <a mat-list-item routerLink="/link5">Fac.Gastos</a>
-    </mat-nav-list>
-  </mat-sidenav>
-  <mat-sidenav-content>
-    <!-- <mat-toolbar color="primary">
-      <button
-        type="button"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="drawer.toggle()"
-        *ngIf="isHandset$ | async">
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-      </button>
-      <span>dashboard</span>
-    </mat-toolbar> -->
-    <!-- <mat-nav-list>
-      <a *ngFor="let item of menuItems" mat-list-item [routerLink]="'/'+item"> {{item | titlecase}} </a>
-    </mat-nav-list>
-    <router-outlet></router-outlet> -->
-    </mat-sidenav-content>
-</mat-sidenav-container>
+<mat-toolbar color="Dark">
+  <span class="menu-title">Menu</span>
+  <span class="spacer"></span>
+  <div class="menu-links">
+    <a mat-button routerLink="/link1">Clientes</a>
+    <a mat-button routerLink="/link2">Proveedores</a>
+    <a mat-button routerLink="/link3">Articulos</a>
+    <a mat-button routerLink="/link4">Familia</a>
+    <a mat-button routerLink="/link5">Fac.Gastos</a>
+  </div>
+</mat-toolbar>
+

@@ -14,13 +14,10 @@ import {MatTableDataSource} from '@angular/material/table';
 export class ProveedoresComponent implements OnInit{
   displayedColumns: string[] = [
     'id',
-    'Nombre',
-    'Apellidos',
-    // 'email',
-    // 'gender',
-    // 'education',
-    // 'dob',
-     'action'
+    'RazonSocial',
+    'PersonaContacto',
+    'Direccion',
+    'action'
   ];
   dataSource!: MatTableDataSource<any>;
 
