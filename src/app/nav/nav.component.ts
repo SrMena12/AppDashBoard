@@ -2,8 +2,6 @@ import { Component } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
-import { MatToolbar } from '@angular/material/toolbar';
-import { MatIconButton } from '@angular/material/button';
 
 @Component({
   selector: 'app-nav',
@@ -17,7 +15,13 @@ export class NavComponent {
       map(result => result.matches),
       shareReplay()
     );
+  menuOpen: boolean = false;
 
   constructor(private breakpointObserver: BreakpointObserver) {}
+
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+  }
+
   menuItems = ['dashboard', 'sales', 'orders', 'customers', 'products'];
 }
