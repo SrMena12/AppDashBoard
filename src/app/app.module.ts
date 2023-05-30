@@ -38,10 +38,11 @@ import { ProveedoresComponent } from './proveedores/proveedores.component';
 import { FamiliaComponent } from './familia/familia.component';
 import { ArticulosComponent } from './articulos/articulos.component';
 import { FacgastosComponent } from './facgastos/facgastos.component';
+import { ArticulosaniadirComponent } from './articulosaniadir/articulosaniadir.component';
 
 
 @NgModule({
-  declarations: [				
+  declarations: [					
     AppComponent,
     NavComponent,
     DashComponent,
@@ -53,7 +54,8 @@ import { FacgastosComponent } from './facgastos/facgastos.component';
     ProveedoresComponent,
       FamiliaComponent,
       ArticulosComponent,
-      FacgastosComponent
+      FacgastosComponent,
+      ArticulosaniadirComponent
    ],
   imports: [
     BrowserModule,
