@@ -19,12 +19,24 @@ export class ClientesaniadirComponent implements OnInit {
     @Inject(MAT_DIALOG_DATA) public data:any,
     ){
     this.empForm = this._fb.group({
-      Nombre: '',
-      Apellidos: '',
-      email: '',
-      telefono: '',
-      // education: '',           //DEJO SOLO NOMBRE Y APELLIDO
-      // dob: ''
+    id: '',
+    RazonSocial: '',
+    PersonaContacto: '',
+    Direccion: '',
+    Ciudad: '',
+    Provincia: '',
+    CodigoPostal: '',
+    Telefono: '',
+    Movil: '',
+    Descuento: '',
+    Recargo: '',
+    Observaciones: '',
+    Foto: '',
+    Correo: '',
+    Login: '',
+    Password: '',
+    Tarifa: '',
+    action: ''
     });
   }
 
@@ -58,4 +70,19 @@ export class ClientesaniadirComponent implements OnInit {
     }
   }
 
+  onFileSelected(event: any) {
+    const file: File = event.target.files[0];
+    if (file) {
+      // Aquí puedes procesar el archivo seleccionado, como cargarlo en tu servidor
+      // Puedes acceder al archivo a través de la variable 'file'
+      console.log(file);
+    }
+  }
+
+  openFilePicker() {
+    const fileInput = document.getElementById('Foto');
+    if (fileInput) {
+      fileInput.click();
+    }
+  }
 }

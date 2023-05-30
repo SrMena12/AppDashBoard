@@ -15,13 +15,9 @@ import {MatTableDataSource} from '@angular/material/table';
 export class ClientesComponent implements OnInit{
   displayedColumns: string[] = [
     'id',
-    'Nombre',
-    'Apellidos',
-    // 'email',
-    // 'gender',
-    // 'education',
-    // 'dob',
-     'action'
+    'RazonSocial',
+    'PersonaContacto',
+    'action'
   ];
   dataSource!: MatTableDataSource<any>;
 
