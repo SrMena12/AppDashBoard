@@ -40,10 +40,11 @@ import { ArticulosComponent } from './articulos/articulos.component';
 import { FacgastosComponent } from './facgastos/facgastos.component';
 import { ArticulosaniadirComponent } from './articulosaniadir/articulosaniadir.component';
 import { FamiliaaniadirComponent } from './familiaaniadir/familiaaniadir.component';
+import { FacgastosaniadirComponent } from './facgastosaniadir/facgastosaniadir.component';
 
 
 @NgModule({
-  declarations: [						
+  declarations: [							
     AppComponent,
     NavComponent,
     DashComponent,
@@ -57,7 +58,8 @@ import { FamiliaaniadirComponent } from './familiaaniadir/familiaaniadir.compone
       ArticulosComponent,
       FacgastosComponent,
       ArticulosaniadirComponent,
-      FamiliaaniadirComponent
+      FamiliaaniadirComponent,
+      FacgastosaniadirComponent
    ],
   imports: [
     BrowserModule,

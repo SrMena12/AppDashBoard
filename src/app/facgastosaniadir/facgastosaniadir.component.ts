@@ -1,39 +1,50 @@
-import { Component,Inject, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { ArticulosService } from '../services/articulos.service';
+import { FacgastosService } from '../services/facgastos.service';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 
-
 @Component({
-  selector: 'app-articulosaniadir',
-  templateUrl: './articulosaniadir.component.html',
-  styleUrls: ['./articulosaniadir.component.css']
+  selector: 'app-facgastosaniadir',
+  templateUrl: './facgastosaniadir.component.html',
+  styleUrls: ['./facgastosaniadir.component.css']
 })
-export class ArticulosaniadirComponent implements OnInit {
-  empForm:FormGroup;
+export class FacgastosaniadirComponent implements OnInit {
 
+  empForm:FormGroup;
   constructor(
     private _fb: FormBuilder, 
-    private _empService: ArticulosService, 
-    private _dialogRef: MatDialogRef<ArticulosaniadirComponent>,
+    private _empService: FacgastosService, 
+    private _dialogRef: MatDialogRef<FacgastosaniadirComponent>,
     @Inject(MAT_DIALOG_DATA) public data:any,
   ) { 
     this.empForm = this._fb.group({
-      Codigo: '',
-      Concepto: '',
-      Familia: '',
+      Numero: '',
+      Fecha: '',
       Proveedor: '',
-      PrecioBase: '',
-      Tarifa1: '',
-      Tarifa2: '',
-      Tarifa3: '',
-      Tarifa4: '',
-      Nºdecimales: '',
-      Iva: '',
-      Stock: '',
-      Minimo: '',
-      Foto: '',
-      Observaciones: '',
+      Cif: '',
+      Base1: '',
+      Iva1: '',
+      Re1: '',
+      Base2: '',
+      Iva2: '',
+      Re2: '',
+      Base3: '',
+      Iva3: '',
+      Re3: '',
+      Base4: '',
+      Iva4: '',
+      Re4: '',
+      Base5: '',
+      Iva5: '',
+      Re5: '',
+      BaseTotal: '',
+      IvaTotal: '',
+      ReqTotal: '',
+      TotalFactura: '',
+      NºFactura: '',
+      Apartado: '',
+      Deducible: '',
+      Pagado: '',
       });
   }
 
@@ -45,7 +56,7 @@ export class ArticulosaniadirComponent implements OnInit {
     if(this.empForm.valid){
       if(this.data) {
         this._empService
-        .updateArticulo(this.data.id, this.empForm.value)
+        .updateFac(this.data.id, this.empForm.value)
         .subscribe({
           next: (val: any) => {
           },
@@ -55,7 +66,7 @@ export class ArticulosaniadirComponent implements OnInit {
         });
       }else {
         this._empService
-        .addArticulo(this.empForm.value).subscribe({
+        .addFac(this.empForm.value).subscribe({
           next: (val: any) => {
           },
           error: (err: any) => {
@@ -81,4 +92,5 @@ export class ArticulosaniadirComponent implements OnInit {
       fileInput.click();
     }
   }
+
 }

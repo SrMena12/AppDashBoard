@@ -1,6 +1,6 @@
 import { Component,Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { ClientesService } from '../services/clientes.service';
+import { FamiliaService } from '../services/familia.service';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 
 @Component({
@@ -12,7 +12,7 @@ export class FamiliaaniadirComponent implements OnInit {
   empForm:FormGroup;
   constructor(
     private _fb: FormBuilder, 
-    private _empService: ClientesService, 
+    private _empService: FamiliaService, 
     private _dialogRef: MatDialogRef<FamiliaaniadirComponent>,
     @Inject(MAT_DIALOG_DATA) public data:any,
   ) { 
@@ -29,7 +29,7 @@ export class FamiliaaniadirComponent implements OnInit {
     if(this.empForm.valid){
       if(this.data) {
         this._empService
-        .updateCliente(this.data.id, this.empForm.value)
+        .updateFamilia(this.data.id, this.empForm.value)
         .subscribe({
           next: (val: any) => {
           },
@@ -39,7 +39,7 @@ export class FamiliaaniadirComponent implements OnInit {
         });
       }else {
         this._empService
-        .addCliente(this.empForm.value).subscribe({
+        .addFamilia(this.empForm.value).subscribe({
           next: (val: any) => {
           },
           error: (err: any) => {
