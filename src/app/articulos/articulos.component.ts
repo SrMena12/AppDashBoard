@@ -17,7 +17,6 @@ export class ArticulosComponent implements OnInit {
     'codigo',
     'concepto',
     'familia',
-    'proveedor'
   ];
   dataSource!: MatTableDataSource<any>;
 
