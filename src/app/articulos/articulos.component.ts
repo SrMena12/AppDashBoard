@@ -6,6 +6,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { ArticulosService } from '../services/articulos.service';
 import { ArticulosaniadirComponent } from '../articulosaniadir/articulosaniadir.component';
 
+
 @Component({
   selector: 'app-articulos',
   templateUrl: './articulos.component.html',
