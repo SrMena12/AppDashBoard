@@ -19,7 +19,6 @@ import { CardComponent } from './card/card.component';
 import { LineChartComponent } from './components/line-chart/line-chart.component';
 import { ClientesComponent } from './clientes/clientes.component';
 import { ClientesaniadirComponent } from './clientesaniadir/clientesaniadir.component';
-
 import { MatDialogModule } from '@angular/material/dialog';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -59,7 +58,7 @@ import { FacgastosaniadirComponent } from './facgastosaniadir/facgastosaniadir.c
       FacgastosComponent,
       ArticulosaniadirComponent,
       FamiliaaniadirComponent,
-      FacgastosaniadirComponent
+      FacgastosaniadirComponent,
    ],
   imports: [
     BrowserModule,

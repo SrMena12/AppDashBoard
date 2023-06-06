@@ -19,20 +19,20 @@ export class ClientesaniadirComponent implements OnInit {
     @Inject(MAT_DIALOG_DATA) public data:any,
     ){
     this.empForm = this._fb.group({
-    id: '',
-    RazonSocial: '',
-    PersonaContacto: '',
+    _id: '',
+    Razon_social: '',
+    Persona_de_contacto: '',
     Direccion: '',
     Ciudad: '',
     Provincia: '',
-    CodigoPostal: '',
+    Codigo_Postal: '',
     Telefono: '',
     Movil: '',
     Descuento: '',
-    Recargo: '',
+    recargo_Eq: '',
     Observaciones: '',
     Foto: '',
-    Correo: '',
+    Correo_E: '',
     Login: '',
     Password: '',
     Tarifa: '',
@@ -70,13 +70,23 @@ export class ClientesaniadirComponent implements OnInit {
     }
   }
 
-  onFileSelected(event: any) {
-    const file: File = event.target.files[0];
-    if (file) {
-      // Aquí puedes procesar el archivo seleccionado, como cargarlo en tu servidor
-      // Puedes acceder al archivo a través de la variable 'file'
-      console.log(file);
-    }
+  selectFile(): void {
+    const fileInput = document.getElementById('fileInput');
+    fileInput?.click(); // Simular el clic en el campo de archivo oculto
+  
+    fileInput?.addEventListener('change', (event: any) => {
+      const file: File = event.target.files[0];
+  
+      if (file) {
+        const reader = new FileReader();
+        reader.readAsDataURL(file);
+  
+        reader.onload = () => {
+          const fileDataURL = reader.result as string;
+          this.empForm.patchValue({ Foto: fileDataURL });
+        };
+      }
+    });
   }
 
   openFilePicker() {

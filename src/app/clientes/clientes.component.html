@@ -16,20 +16,20 @@
       <table mat-table [dataSource]="dataSource" matSort>
     
         <!-- ID Column -->
-        <ng-container matColumnDef="id">
+        <ng-container matColumnDef="_id">
           <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
-          <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+          <td mat-cell *matCellDef="let row"> {{row._id}} </td>
         </ng-container>
     
         <!-- Progress Column -->
-        <ng-container matColumnDef="RazonSocial">
-          <th mat-header-cell *matHeaderCellDef mat-sort-header> RazonSocial </th>
-          <td mat-cell *matCellDef="let row"> {{row.RazonSocial}} </td>
+        <ng-container matColumnDef="Razon_Social">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Razon_Social </th>
+          <td mat-cell *matCellDef="let row"> {{row.Razon_Social}} </td>
         </ng-container>
     
-        <ng-container matColumnDef="PersonaContacto">
-          <th mat-header-cell *matHeaderCellDef mat-sort-header> PersonaContacto </th>
-          <td mat-cell *matCellDef="let row"> {{row.PersonaContacto}} </td>
+        <ng-container matColumnDef="Persona_de_contacto">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Persona_de_contacto </th>
+          <td mat-cell *matCellDef="let row"> {{row.Persona_de_contacto}} </td>
         </ng-container>
     
   

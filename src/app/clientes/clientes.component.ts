@@ -14,9 +14,9 @@ import {MatTableDataSource} from '@angular/material/table';
 })
 export class ClientesComponent implements OnInit{
   displayedColumns: string[] = [
-    'id',
-    'RazonSocial',
-    'PersonaContacto',
+    '_id',
+    'Razon_Social',
+    'Persona_de_contacto',
     'action'
   ];
   dataSource!: MatTableDataSource<any>;
@@ -46,7 +46,7 @@ export class ClientesComponent implements OnInit{
   }
 
   getClienteList() {
-    this._empService.getClienteList().subscribe({
+    this._empService.getClientList().subscribe({
       next: (res) => {
         this.dataSource = new MatTableDataSource(res);
         this.dataSource.sort = this.sort;
