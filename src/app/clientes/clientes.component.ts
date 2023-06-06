@@ -46,7 +46,7 @@ export class ClientesComponent implements OnInit{
   }
 
   getClienteList() {
-    this._empService.getClientList().subscribe({
+    this._empService.getClienteList().subscribe({
       next: (res) => {
         this.dataSource = new MatTableDataSource(res);
         this.dataSource.sort = this.sort;
