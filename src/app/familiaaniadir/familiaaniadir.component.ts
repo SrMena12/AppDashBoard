@@ -32,6 +32,7 @@ export class FamiliaaniadirComponent implements OnInit {
         .updateFamilia(this.data.id, this.empForm.value)
         .subscribe({
           next: (val: any) => {
+            this._dialogRef.close();
           },
           error: (err: any) => {
             console.error(err);
@@ -41,6 +42,7 @@ export class FamiliaaniadirComponent implements OnInit {
         this._empService
         .addFamilia(this.empForm.value).subscribe({
           next: (val: any) => {
+            this._dialogRef.close();
           },
           error: (err: any) => {
             console.error(err);

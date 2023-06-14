@@ -48,6 +48,7 @@ export class ProveedoresaniadirComponent implements OnInit {
         .updateProveedor(this.data.id, this.empForm.value)
         .subscribe({
           next: (val: any) => {
+            this._dialogRef.close();
           },
           error: (err: any) => {
             console.error(err);
@@ -57,6 +58,7 @@ export class ProveedoresaniadirComponent implements OnInit {
         this._empService
         .addProveedor(this.empForm.value).subscribe({
           next: (val: any) => {
+            this._dialogRef.close();
           },
           error: (err: any) => {
             console.error(err);

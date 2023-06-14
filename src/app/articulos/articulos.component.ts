@@ -14,9 +14,10 @@ import { ArticulosaniadirComponent } from '../articulosaniadir/articulosaniadir.
 })
 export class ArticulosComponent implements OnInit {
   displayedColumns: string[] = [
-    'codigo',
-    'concepto',
-    'familia',
+    'Codigo',
+    'Concepto',
+    'Familia',
+    'action'
   ];
   dataSource!: MatTableDataSource<any>;
 

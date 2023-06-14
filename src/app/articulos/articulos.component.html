@@ -15,19 +15,31 @@
   <div class="table-container">
     <table mat-table [dataSource]="dataSource" matSort>
   
-      <ng-container matColumnDef="codigo">
+      <ng-container matColumnDef="Codigo">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Codigo </th>
-        <td mat-cell *matCellDef="let row"> {{row.codigo}} </td>
+        <td mat-cell *matCellDef="let row"> {{row.Codigo}} </td>
       </ng-container>
 
-      <ng-container matColumnDef="concepto">
+      <ng-container matColumnDef="Concepto">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Concepto </th>
-        <td mat-cell *matCellDef="let row"> {{row.concepto}} </td>
+        <td mat-cell *matCellDef="let row"> {{row.Concepto}} </td>
       </ng-container>
   
-      <ng-container matColumnDef="familia">
+      <ng-container matColumnDef="Familia">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Familia </th>
-        <td mat-cell *matCellDef="let row"> {{row.familia}} </td>
+        <td mat-cell *matCellDef="let row"> {{row.Familia}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Action </th>
+        <td mat-cell *matCellDef="let row">
+          <button mat-icon-button color="primary" (click)="openEditForm(row)">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button mat-icon-button color="warn" (click)="deleteArticulo(row.id)">
+            <mat-icon>delete</mat-icon>
+          </button> 
+        </td>
       </ng-container>
   
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

@@ -10,19 +10,19 @@ export class ProveedoresService {
   constructor(private _http: HttpClient) { }
 
   addProveedor(data: any): Observable<any>{
-    return this._http.post('http://localhost:3000/employees', data); //Preguntar donde poner token
+    return this._http.post('http://localhost:3000/proveedores', data); //Preguntar donde poner token
   }
 
   updateProveedor(id: number, data: any): Observable<any>{
-    return this._http.put(`http://localhost:3000/employees/${id}`, data);
+    return this._http.put(`http://localhost:3000/proveedores/${id}`, data);
    
   }
 
   getProveedorList(): Observable<any>{
-    return this._http.get('http://localhost:3000/employees');
+    return this._http.get('http://localhost:3000/proveedores');
   }
 
   deleteProveedor(id: number): Observable<any> {
-    return this._http.delete(`http://localhost:3000/employees/${id}`);
+    return this._http.delete(`http://localhost:3000/proveedores/${id}`);
   }
 }

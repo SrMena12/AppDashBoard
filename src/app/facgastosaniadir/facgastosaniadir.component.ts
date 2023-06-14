@@ -59,6 +59,7 @@ export class FacgastosaniadirComponent implements OnInit {
         .updateFac(this.data.id, this.empForm.value)
         .subscribe({
           next: (val: any) => {
+            this._dialogRef.close();
           },
           error: (err: any) => {
             console.error(err);
@@ -68,6 +69,7 @@ export class FacgastosaniadirComponent implements OnInit {
         this._empService
         .addFac(this.empForm.value).subscribe({
           next: (val: any) => {
+            this._dialogRef.close();
           },
           error: (err: any) => {
             console.error(err);
