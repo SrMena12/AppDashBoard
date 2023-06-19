@@ -15,7 +15,8 @@ export class FacgastosComponent implements OnInit {
   displayedColumns: string[] = [
     'Numero',
     'Fecha',
-    'Proveedor'
+    'Proveedor',
+    'action'
   ];
   dataSource!: MatTableDataSource<any>;
 

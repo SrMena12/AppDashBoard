@@ -1,0 +1,158 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "articulos": [
+    {
+      "Codigo": "123456",
+      "Concepto": "Mi tiendaa",
+      "Familia": "Mena",
+      "Proveedor": "Mi empresa S.L",
+      "PrecioBase": "4500€",
+      "Tarifa1": "200€",
+      "Tarifa2": "150€",
+      "Tarifa3": "100€",
+      "Tarifa4": "50€",
+      "Nºdecimales": "1",
+      "Iva": "21%",
+      "Stock": "200000",
+      "Minimo": "100",
+      "Foto": "",
+      "Observaciones": "No hay",
+      "id": 1
+    },
+    {
+      "Codigo": "aaaaaaaaa",
+      "Concepto": "aaaaaaaaaa",
+      "Familia": "aaaaaaaaa",
+      "Proveedor": "aaaaaaa",
+      "PrecioBase": "aaaaaaa",
+      "Tarifa1": "aaaaaaaaaaa",
+      "Tarifa2": "aaaaaaaaa",
+      "Tarifa3": "aaaaaaaaaaaaaa",
+      "Tarifa4": "aaaaaaaaaaa",
+      "Nºdecimales": "aaaa",
+      "Iva": "aaaaa",
+      "Stock": "aaaaaaa",
+      "Minimo": "aaaaaaaaa",
+      "Foto": "aaaaaaa",
+      "Observaciones": "aaaaaaaaa",
+      "id": 2
+    },
+    {
+      "Codigo": "bbbbbbb",
+      "Concepto": "bbbbbb",
+      "Familia": "bbbbbb",
+      "Proveedor": "bbbbbbbb",
+      "PrecioBase": "bbbbbbb",
+      "Tarifa1": "bbbbbbbbbb",
+      "Tarifa2": "bbbbbbbbbbb",
+      "Tarifa3": "bbbbbbbbbbbbb",
+      "Tarifa4": "bbbbbb",
+      "Nºdecimales": "bbbbbb",
+      "Iva": "bbbbbbbb",
+      "Stock": "bbbbbb",
+      "Minimo": "bbbbbb",
+      "Foto": "bbbbbb",
+      "Observaciones": "bbbbbbbb",
+      "id": 3
+    }
+  ],
+  "familia": [
+    {
+      "Familia": "Menas",
+      "id": 1
+    },
+    {
+      "Familia": "perez",
+      "id": 2
+    }
+  ],
+  "facgastos": [
+    {
+      "Numero": "bbbbbbbbb",
+      "Fecha": "aaaaaaaaaaa",
+      "Proveedor": "aaaaaaaa",
+      "Cif": "aaaaaaaaaaaaa",
+      "Base1": "aaaaaa",
+      "Iva1": "aaaaaaa",
+      "Re1": "aaaa",
+      "Base2": "aaaaa",
+      "Iva2": "a",
+      "Re2": "aaaaaaaaaaa",
+      "Base3": "aaaaaaa",
+      "Iva3": "aaaaaa",
+      "Re3": "aaaaaaaaaaaa",
+      "Base4": "aaaaa",
+      "Iva4": "aaaaaa",
+      "Re4": "aaaaaaa",
+      "Base5": "aaaaa",
+      "Iva5": "aaaaaa",
+      "Re5": "aaaaa",
+      "BaseTotal": "aaaaaaaa",
+      "IvaTotal": "aaaaaaa",
+      "ReqTotal": "aaaaaaaaaaa",
+      "TotalFactura": "aaaaaaa",
+      "NºFactura": "aaaaa",
+      "Apartado": "aaaaa",
+      "Deducible": "aaaaaaa",
+      "Pagado": "aaaaaaaa",
+      "id": 1
+    }
+  ],
+  "proveedores": [
+    {
+      "RazonSocial": "aaaaaaaa",
+      "PersonaContacto": "aaaaaa",
+      "Direccion": "aaaaaaaaa",
+      "Provincia": "aaaaaaaaaaaaa",
+      "CodigoPostal": "aaaaaaaaa",
+      "Telefono": "aaaaaa",
+      "Movil": "aaaaaaaaa",
+      "Descuento": "aaaaaaaaaaaaaa",
+      "Recargo": "aaaaaaaaa",
+      "Observaciones": "aaaaa",
+      "Foto": "C:\\fakepath\\8489335f-c085-4181-92de-201533c773ab.jpg",
+      "Correo": "aaaaaaaaaaa",
+      "Login": "aaaaa",
+      "Password": "aaaaaaaa",
+      "PagWeb": "aaaaaaaa",
+      "id": 1
+    }
+  ],
+  "clientes": [
+    {
+      "_id": "",
+      "Ciudad": "Victor",
+      "Correo_E": "mena121997@gmail.com",
+      "Direccion": "Segundo Flores, 5",
+      "Foto": "",
+      "Movil": "999999999",
+      "Observaciones": "Sin observaciones",
+      "Password": "1234",
+      "Persona_de_contacto": "Victor Mena",
+      "Provincia": "Toledo",
+      "Razon_social": "Vortice Eventos",
+      "Tarifa": "Opción 2",
+      "Telefono": "697120086",
+      "descuento": "10%",
+      "login": "srmena12",
+      "recargo_Eq": "25€",
+      "id": 1
+    }
+  ]
+}

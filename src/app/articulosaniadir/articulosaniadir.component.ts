@@ -48,6 +48,7 @@ export class ArticulosaniadirComponent implements OnInit {
         .updateArticulo(this.data.id, this.empForm.value)
         .subscribe({
           next: (val: any) => {
+            this._dialogRef.close();
           },
           error: (err: any) => {
             console.error(err);
@@ -57,6 +58,7 @@ export class ArticulosaniadirComponent implements OnInit {
         this._empService
         .addArticulo(this.empForm.value).subscribe({
           next: (val: any) => {
+            this._dialogRef.close();
           },
           error: (err: any) => {
             console.error(err);

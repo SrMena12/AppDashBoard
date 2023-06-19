@@ -13,7 +13,8 @@ import { FamiliaaniadirComponent } from '../familiaaniadir/familiaaniadir.compon
 })
 export class FamiliaComponent implements OnInit {
   displayedColumns: string[] = [
-    'familia',
+    'Familia',
+    'action'
   ];
   dataSource!: MatTableDataSource<any>;
 

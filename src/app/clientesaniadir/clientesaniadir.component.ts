@@ -20,23 +20,21 @@ export class ClientesaniadirComponent implements OnInit {
     ){
     this.empForm = this._fb.group({
     _id: '',
-    Razon_social: '',
-    Persona_de_contacto: '',
-    Direccion: '',
     Ciudad: '',
-    Provincia: '',
-    Codigo_Postal: '',
-    Telefono: '',
-    Movil: '',
-    Descuento: '',
-    recargo_Eq: '',
-    Observaciones: '',
-    Foto: '',
     Correo_E: '',
-    Login: '',
+    Direccion: '',
+    Foto: '',
+    Movil: '',
+    Observaciones: '',
     Password: '',
+    Persona_de_contacto: '',
+    Provincia: '',
+    Razon_social: '',
     Tarifa: '',
-    action: ''
+    Telefono: '',
+    descuento: '',
+    login: '',
+    recargo_Eq: '',
     });
   }
 
@@ -44,55 +42,29 @@ export class ClientesaniadirComponent implements OnInit {
       this.empForm.patchValue(this.data);
   }
 
-  onFormSubmit(){
-    if(this.empForm.valid){
-      if(this.data) {
+  onFormSubmit() {
+    if (this.empForm.valid) {
+      if (this.data) {
         this._empService
-        .updateCliente(this.data.id, this.empForm.value)
-        .subscribe({
+          .updateClient(this.data.id, this.empForm.value)
+          .subscribe({
+            next: (val: any) => {
+              this._dialogRef.close(); // Cierra el diálogo después de guardar los datos
+            },
+            error: (err: any) => {
+              console.error(err);
+            },
+          });
+      } else {
+        this._empService.addClient(this.empForm.value).subscribe({
           next: (val: any) => {
-          },
-          error: (err: any) => {
-            console.error(err);
-          },
-        });
-      }else {
-        this._empService
-        .addCliente(this.empForm.value).subscribe({
-          next: (val: any) => {
+            this._dialogRef.close(); // Cierra el diálogo después de guardar los datos
           },
           error: (err: any) => {
             console.error(err);
           },
         });
       }
-      
-    }
-  }
-
-  selectFile(): void {
-    const fileInput = document.getElementById('fileInput');
-    fileInput?.click(); // Simular el clic en el campo de archivo oculto
-  
-    fileInput?.addEventListener('change', (event: any) => {
-      const file: File = event.target.files[0];
-  
-      if (file) {
-        const reader = new FileReader();
-        reader.readAsDataURL(file);
-  
-        reader.onload = () => {
-          const fileDataURL = reader.result as string;
-          this.empForm.patchValue({ Foto: fileDataURL });
-        };
-      }
-    });
-  }
-
-  openFilePicker() {
-    const fileInput = document.getElementById('Foto');
-    if (fileInput) {
-      fileInput.click();
     }
   }
 }

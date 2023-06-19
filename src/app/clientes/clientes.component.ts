@@ -46,7 +46,7 @@ export class ClientesComponent implements OnInit{
   }
 
   getClienteList() {
-    this._empService.getClienteList().subscribe({
+    this._empService.getClientList().subscribe({
       next: (res) => {
         this.dataSource = new MatTableDataSource(res);
         this.dataSource.sort = this.sort;
@@ -66,7 +66,7 @@ export class ClientesComponent implements OnInit{
     }
 
     deleteCliente(id: number){
-      this._empService.deleteCliente(id).subscribe({
+      this._empService.deleteClient(id).subscribe({
         next: (res) => {  
           this.getClienteList();
         },
@@ -74,15 +74,15 @@ export class ClientesComponent implements OnInit{
       });
     }
 
-    openEditForm(data: any){
-       const dialogRef = this._dialog.open(ClientesaniadirComponent, {
-        data, 
-       });
-
-       dialogRef.afterClosed().subscribe({
+    openEditForm(data: any) {
+      const dialogRef = this._dialog.open(ClientesaniadirComponent, {
+        data,
+      });
+    
+      dialogRef.afterClosed().subscribe({
         next: (val) => {
-          if(val) {
-            this.getClienteList();
+          if (val) {
+            this.getClienteList(); 
           }
         }
       });

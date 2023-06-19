@@ -9,20 +9,20 @@ export class ClientesService {
 
   constructor(private _http: HttpClient) { }
 
-  addCliente(data: any): Observable<any>{
-    return this._http.post('http://localhost:3004/api/clientes', data);
+  addClient(data: any): Observable<any>{
+    return this._http.post('http://localhost:3000/clientes', data);
   }
 
-  updateCliente(id: number, data: any): Observable<any>{
-    return this._http.put(`http://localhost:3004/api/clientes/:${id}`, data);
+  updateClient(id: number, data: any): Observable<any>{
+    return this._http.put(`http://localhost:3000/clientes/${id}`, data);
    
   }
 
-  getClienteList(): Observable<any>{
-    return this._http.get('http://localhost:3004/api/clientes');
+  getClientList(): Observable<any>{
+    return this._http.get('http://localhost:3000/clientes');
   }
 
-  deleteCliente(id: number): Observable<any> {
-    return this._http.delete(`http://localhost:3004/api/clientes/${id}`);
+  deleteClient(id: number): Observable<any> {
+    return this._http.delete(`http://localhost:3000/clientes/${id}`);
   }
 }
